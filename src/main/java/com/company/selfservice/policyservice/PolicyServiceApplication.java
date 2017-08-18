@@ -19,7 +19,6 @@ import com.mongodb.MongoClient;
 
 @SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 @ComponentScan({"com.company.selfservice.policyservice"})
-@Profile("dev")
 public class PolicyServiceApplication {
 	
 public static void main(String[] args) {
