@@ -15,10 +15,11 @@ import com.company.selfservice.policyservice.domain.bean.Policyd;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
+import com.mongodb.Mongo;
 
 @Service
 public class PoliciesService {
-	@Autowired(required = true)
+	@Autowired
 	private MongoTemplate mongoTemplate;
 
 	public List<Policyd> getAllPolicies() {
@@ -135,5 +136,13 @@ public class PoliciesService {
 		beneficiaryList.setCustomerId("1227546");
 		result = "success";
 		return beneficiaryList;
+	}
+
+	public MongoTemplate getMongoTemplate() {
+		return mongoTemplate;
+	}
+
+	public void setMongoTemplate(MongoTemplate mongoTemplate) {
+		this.mongoTemplate = mongoTemplate;
 	}
 }
