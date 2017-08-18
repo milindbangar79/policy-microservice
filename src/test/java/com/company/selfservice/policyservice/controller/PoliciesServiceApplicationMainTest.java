@@ -55,7 +55,6 @@ public class PoliciesServiceApplicationMainTest extends PoliciesControllerTest  
 	pd.add(policiesDetails);
 	Mockito.when(policiesService.getAllPolicies()).thenReturn(pd);
 	String uri = "/policies";
-
 	setUp(controller);
 	MvcResult result = mvc.perform(MockMvcRequestBuilders.get(uri).accept(MediaType.APPLICATION_JSON)).andReturn();
 
@@ -81,7 +80,8 @@ public class PoliciesServiceApplicationMainTest extends PoliciesControllerTest  
 		Beneficiary beneficiary=new Beneficiary(1227546,"John");
 		String inputJson = super.mapToJson(beneficiary);
 		String uri = "/policies/beneficiary/add";
-
+		String msg="success";
+		Mockito.when(policiesService.addBeneficiary(Mockito.any(Beneficiary.class))).thenReturn(msg);
 		setUp(controller);
 		MvcResult result = mvc
                 .perform(MockMvcRequestBuilders.post(uri)
