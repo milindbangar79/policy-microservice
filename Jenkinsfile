@@ -17,6 +17,7 @@ def applicationname="PolicyServiceMicroService"
 def relbranch_config="master"
 
 node (){
+
    def VERSION
    def mvnHome = tool 'M3'
    def javaHome = tool 'jdk'
