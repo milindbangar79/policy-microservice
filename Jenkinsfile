@@ -6,7 +6,7 @@ jiracredId = 'JIRA'
 /* Application Constants */
 sonarQubeURL='http://34.205.155.82:8090'
 bbprotocol='https'
-bbURL='bitbucket.org/darwinninja/customerservice.git'
+bbURL='bitbucket.org/darwinninja/policyservice.git'
 devops_repo=""
 relbranch_devops="master"
 relbranch_config="master"
