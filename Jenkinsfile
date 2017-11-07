@@ -21,6 +21,7 @@ node (){
    def VERSION
    def mvnHome = tool 'M3'
    def javaHome = tool 'jdk'
+   
 
 stage 'Checkout'
    deleteDir() 
